@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>點一點設計諮詢服務</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 2em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        button[type="reset"] {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #b0b0b0;
+        }
+        
+        span.required {
+            color: red;
+            margin-left: 5px;
+        }
+
+        .info-container {
+    position: relative;
+    display: inline-block; 
+}
+
+.hover-info {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    width: 250px; 
+}
+
+.hover-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: #ccc;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.hover-icon:hover + .hover-info {
+    display: block;
+}
+
+
+
+        .checkbox {
+            float: inline-block;
+        }
+        </style>
+</head>
+
+<body>
+<form action="#" method="post">
+    <p>請花一點點時間填寫以下的設計裝潢需求單（* 為必填），我們的專業客服會與您聯絡，根據您提供的需求資料幫您找尋最適合的優良設計師，與您詳細討論後提出設計構想與初估報價！(點一點設計諮詢服務在2023/12/31前免費提供)</p>
+    
+    <label>空間用途<span class="required">*</span></label>
+    <select name="facility">
+        <option value="" selected disabled>- 請選擇 -</option>
+        <option value="facility1">住家</option>
+        <option value="facility2">辦公</option>
+        <option value="facility3">店面</option>
+        <option value="facility4">其他</option>
+    </select>
+    
+    <label>空間類型<span class="required">*</span></label>
+    <select name="venue">
+        <option value="" selected disabled>- 請選擇 -</option>
+        <option value="venue1">場館1</option>
+        <option value="venue2">場館2</option>
+    </select>
+    
+    <label>設計裝潢面積<span class="required">*</span></label>
+    <input type="text" name="facilityType" placeholder="- 請選擇 -">
+    
+    <label>設計裝潢預算<span class="required">*</span></label>
+    <select name="facilityTypeSelect">
+        <option value="" selected disabled>- 請選擇 -</option>
+        <option value="type1">類型1</option>
+        <option value="type2">類型2</option>
+    </select>
+
+    <p>※  不知道怎麼抓預算? 請參考：<a href="http://www.idid.com.tw/decorating-knew/design-does-not-explain2/91-preliminary-estimates-suggest-design-and-decoration-budget.html">初估．設計裝修預算</a></p>
+    
+    <label>設計風格<span class="required">*</span></label>
+    <input class="checkbox" type="checkbox" name="style" value="現代"> 現代<br>
+    <input class="checkbox" type="checkbox" name="style" value="簡約"> 簡約<br>
+    <input class="checkbox" type="checkbox" name="style" value="休閒"> 休閒<br>
+    <input class="checkbox" type="checkbox" name="style" value="古典"> 古典<br>
+    <input class="checkbox" type="checkbox" name="style" value="奢華"> 奢華<br>
+    <input class="checkbox" type="checkbox" name="style" value="鄉村"> 鄉村<br>
+    <input class="checkbox" type="checkbox" name="style" value="北歐"> 北歐<br>
+    <input class="checkbox" type="checkbox" name="style" value="美式"> 美式<br>
+    <input class="checkbox" type="checkbox" name="style" value="工業"> 工業<br>
+    <input class="checkbox" type="checkbox" name="style" value="中式"> 中式<br>
+    <input class="checkbox" type="checkbox" name="style" value="日式"> 日式<br>
+    <input class="checkbox" type="checkbox" name="style" value="其他"> 其他<br>
+    
+    
+    <label>上傳喜歡的風格照</label>
+    <input type="file" name="facilityPhoto">
+    
+    <label>設計裝潢需求描述</label>
+    <textarea name="facilityDescription" rows="10" cols="50"></textarea>
+
+<div class="info-container">
+    上傳圖片及影片
+    <span class="hover-icon">?</span>
+    <div class="hover-info">
+        請將照片上傳至此處 (例如：客廳) 客廳照片 (上傳清晰彩色照片)<br>
+        檔案大小限制在10MB內，若有需求，以文字形式在下方描述<br>
+        若有現場的動態影片：如風吹草動、水流動聲等，請勿逾期提供。
+    </div>
+</div>
+
+    <input type="file" name="descriptionPhoto">
+    
+    
+    <label>您的姓名<span class="required">*</span></label>
+    <input type="text" name="name">
+    
+    <label>聯絡電話<span class="required">*</span></label>
+    <input type="text" name="phone">
+
+    <label>Email<span class="required">*</span></label>
+    <input type="email" name="email">
+    
+    <label>撥打時段<span class="required">*</span></label>
+    <input type="radio" name="callTime" value="9-12"> 上午 09:00-12:00
+    <input type="radio" name="callTime" value="12-14"> 中午 12:00-14:00
+    <input type="radio" name="callTime" value="14-19"> 下午 14:00-19:00
+    
+    <label>隱私權保護政策<span class="required">*</span></label>
+    <input type="checkbox" name="recallPermission" value="yes"> 我已閱讀並同意下方之點一點設計網站隱私權保護政策
+    
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+</form>
+</body>
+</html>
